@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>photo</title>
+	<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><!--兼容所有浏览器的基本样式-->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="http://fonts.googlefonts.net/css?family=Lato" ref="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- nav -->
+	<nav class="nav">
+		<button id="barBtn" class="button-bar"><i class="fa fa-bars"></i></button>
+	</nav>
+	<div id="navModal" class="nav-modal animation-top">
+		<button id="closeBtn"><i class="fa fa-times"></i></button>
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Photo</a></li>
+			<li><a href="#">Shop</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<!-- header -->
+	<header class="header">
+		<h1>PHOTOLID</h1>
+		<p>A template made by lirenmi.cn for photographers.</p>
+		<button id="toggleBtn" class="button">Toggle Grid padding</button>
+	</header>
+	<!-- main -->
+	<main id="main" class="container">
+		<div class="column">
+			<img src="https://unsplash.it/420/700?image=1065" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/1917?image=993" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/1337?image=992" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/422?image=1047" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/281?image=1070" width="100%" alt="photo">
+		</div>
+		<div class="column">
+			<img src="https://unsplash.it/420/1927?image=1055" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/133?image=1051" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/281?image=1047" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/287?image=1044" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/2647?image=1027" width="100%" alt="photo">
+		</div>
+		<div class="column">
+			<img src="https://unsplash.it/420/292?image=994" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/420?image=1040" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/420?image=1009" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/281?image=1006" width="100%" alt="photo">
+			<img src="https://unsplash.it/420/420?image=1003" width="100%" alt="photo">
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="footer">
+		<p class="Iconbar">
+			<i class="fa fa-weixin"></i>
+			<i class="fa fa-weibo"></i>
+			<i class="fa fa-github"></i>
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-qq"></i>
+		</p>
+		<p>
+			Powered by <a href="http://www.lirenmi.cn" target="_blank">lirenmi.cn</a> 
+		</p>
+	</footer>
+	
+	<script type="text/javascript">
+		// 控制导航层显示
+		var bar = document.getElementById("barBtn");
+		var nav = document.getElementById("navModal");
+		var close = document.getElementById("closeBtn");
+		bar.onclick = function() {
+			nav.style.display = 'block';
+		}
+		close.onclick = function() {
+			nav.style.display = 'none';
+		}
+
+		// 
+		var toggleBtn = document.getElementById("toggleBtn");
+		var main = document.getElementById("main");
+		toggleBtn.onclick = function() {
+			if (main.className.indexOf("space") > -1){
+				main.className = main.className.replace("space","")
+			}else{
+				main.className = main.className + " space"
+			}
+		}
+	</script>
+
+</body>
+</html>
